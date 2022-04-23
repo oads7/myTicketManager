@@ -32,5 +32,37 @@ namespace myTicketManager.View
             State.Items.Add(FlightState.Flying);
             State.Items.Add(FlightState.Finished);
         }
+
+        private void DepartureDate_DateChanged(object sender, RoutedEventArgs e)
+        {
+            DepartureTime.Text = DepartureDate.DisplayDate.ToShortTimeString();
+        }
+
+        private void DepartureText_Changed(object sender, RoutedEventArgs e)
+        {
+            DateTime time = DateTime.Parse(DepartureTime.Text);
+
+            DepartureDate.DisplayDate.AddHours(time.Hour);
+            DepartureDate.DisplayDate.AddMinutes(time.Minute);
+            DepartureDate.DisplayDate.AddSeconds(time.Second);
+        }
+
+        private void ArriveDate_DateChanged(object sender, RoutedEventArgs e)
+        {
+            DepartureTime.Text = DepartureDate.DisplayDate.ToShortTimeString();
+        }
+
+        private void ArriveText_Changed(object sender, RoutedEventArgs e)
+        {
+            DateTime time = DateTime.Parse(DepartureTime.Text);
+
+            DepartureDate.DisplayDate.AddHours(time.Hour);
+            DepartureDate.DisplayDate.AddMinutes(time.Minute);
+            DepartureDate.DisplayDate.AddSeconds(time.Second);
+        }
+
+        private void Apply_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

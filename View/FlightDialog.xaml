@@ -5,23 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:myTicketManager.View"
         mc:Ignorable="d"
-        Title="Flight" Height="271" Width="260" Loaded="Window_Loaded">
+        Title="Flight" Height="342" Width="276" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Number of Flight&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Airline" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Source" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Destiny" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Departure Time" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Height="28"/>
-        <Label Content="Arrive Time" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Height="28"/>
-        <Label Content="State" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Arrive Time" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="State" HorizontalAlignment="Left" Margin="14,221,0,0" VerticalAlignment="Top" Height="28"/>
         <TextBox x:Name="Flight" HorizontalAlignment="Left" Margin="116,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <TextBox x:Name="Airline" HorizontalAlignment="Left" Margin="116,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <TextBox x:Name="Source" HorizontalAlignment="Left" Margin="116,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <TextBox x:Name="Destiny" HorizontalAlignment="Left" Margin="116,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <DatePicker x:Name="DepartureDate" HorizontalAlignment="Left" Margin="116,124,0,0" VerticalAlignment="Top" Width="134"/>
-        <DatePicker x:Name="ArriveDate" HorizontalAlignment="Left" Margin="116,153,0,0" VerticalAlignment="Top" Width="134"/>
-        <ComboBox x:Name="State" HorizontalAlignment="Left" Margin="116,181,0,0" VerticalAlignment="Top" Width="134"/>
-        <Button x:Name="Apply" Content="Aceptar" HorizontalAlignment="Left" Margin="180,218,0,0" VerticalAlignment="Top" Width="70" Height="24"/>
+        <DatePicker x:Name="DepartureDate" HorizontalAlignment="Left" Margin="116,124,0,0" Width="134" SelectedDateFormat="Short" SelectedDateChanged="DepartureDate_DateChanged" Height="24" VerticalAlignment="Top"/>
+        <DatePicker x:Name="ArriveDate" Margin="116,171,0,0" SelectedDateFormat="Long" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134"/>
+        <ComboBox x:Name="State" HorizontalAlignment="Left" Margin="116,224,0,0" VerticalAlignment="Top" Width="134"/>
+        <Button x:Name="Apply" Content="Aceptar" Margin="180,266,0,0" Click="Apply_Click" HorizontalAlignment="Left" Width="70" Height="24" VerticalAlignment="Top"/>
+        <TextBox x:Name="DepartureTime" HorizontalAlignment="Left" Margin="180,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="ArriveTime" HorizontalAlignment="Left" Margin="180,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
 
     </Grid>
 </Window>
