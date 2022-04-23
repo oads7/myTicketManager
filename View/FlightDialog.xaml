@@ -21,7 +21,7 @@
         <DatePicker x:Name="DepartureDate" HorizontalAlignment="Left" Margin="116,124,0,0" VerticalAlignment="Top" Width="134"/>
         <DatePicker x:Name="ArriveDate" HorizontalAlignment="Left" Margin="116,153,0,0" VerticalAlignment="Top" Width="134"/>
         <ComboBox x:Name="State" HorizontalAlignment="Left" Margin="116,181,0,0" VerticalAlignment="Top" Width="134"/>
-        <Button x:Name="Apply" Content="Aceptar" HorizontalAlignment="Left" Margin="180,218,0,0" VerticalAlignment="Top" Width="70" Height="24" Click="Apply_Click"/>
+        <Button x:Name="Apply" Content="Aceptar" HorizontalAlignment="Left" Margin="180,218,0,0" VerticalAlignment="Top" Width="70" Height="24"/>
 
     </Grid>
 </Window>

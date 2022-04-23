@@ -25,5 +25,10 @@ namespace myTicketManager.Controllers
             await Database.DeleteFlight(numFlight);
         }
 
+        public static async void AddFlight(Flight flight)
+        {
+            await Database.AddFlight(flight);
+        }
+
     }
 }

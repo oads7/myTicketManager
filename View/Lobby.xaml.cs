@@ -71,7 +71,7 @@ namespace myTicketManager.View
                 flightDialog.Close();
             };
 
-
+            FlightList.AddFlight(item);
         }
 
         private void DeleteFlight_Click(object sender, RoutedEventArgs e)

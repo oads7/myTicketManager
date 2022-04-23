@@ -94,7 +94,7 @@ namespace myTicketManager.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/myTicketManager;V1.0.0.0;component/view/lobby.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/myTicketManager;component/view/lobby.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\Lobby.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

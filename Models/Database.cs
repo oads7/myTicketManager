@@ -93,11 +93,36 @@ namespace myTicketManager
 
 
 
-        //public static bool AddFlight(Flight newFLight)
-        //{
+        public static async Task<bool> AddFlight(Flight newFLight)
+        {
+            bool returnValue = false;
 
+            try
+            {
+                database.Open();
+                SqlDataReader reader = await database.Query("INSERT INTO dbo.Flights(\"Flight\", \"Airline\", " +
+                                                                                    "\"Source\", \"Destiny\", " +
+                                                                                    "\"DepartureDate\", \"ArriveDate\", " +
+                                                                                    "\"State\") " +
+                                                            "VALUES('" + newFLight.numFlight + "', '" +
+                                                                         newFLight.airline + "', '" +
+                                                                         newFLight.source + "', '" +
+                                                                         newFLight.destiny + "', '" +
+                                                                         newFLight.departureDate.ToString() + "', '" +
+                                                                         newFLight.arriveDate.ToString() + "', '" +
+                                                                         newFLight.state + ");");
 
-        //}
+                reader.Read();
+                returnValue = true;
+            }
+            catch (Exception ex)
+            {
+                Log.WriteException(ex);
+            }
+
+            database.Close();
+            return returnValue;
+        }
 
 
 
