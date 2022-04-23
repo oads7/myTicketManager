@@ -1,0 +1,27 @@
+﻿<Window x:Class="myTicketManager.View.FlightDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myTicketManager.View"
+        mc:Ignorable="d"
+        Title="Flight" Height="271" Width="260" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Number of Flight&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Airline" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Source" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Destiny" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Departure Time" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Arrive Time" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="State" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Height="28"/>
+        <TextBox x:Name="Flight" HorizontalAlignment="Left" Margin="116,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="Airline" HorizontalAlignment="Left" Margin="116,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="Source" HorizontalAlignment="Left" Margin="116,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="Destiny" HorizontalAlignment="Left" Margin="116,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <DatePicker x:Name="DepartureDate" HorizontalAlignment="Left" Margin="116,124,0,0" VerticalAlignment="Top" Width="134"/>
+        <DatePicker x:Name="ArriveDate" HorizontalAlignment="Left" Margin="116,153,0,0" VerticalAlignment="Top" Width="134"/>
+        <ComboBox x:Name="State" HorizontalAlignment="Left" Margin="116,181,0,0" VerticalAlignment="Top" Width="134"/>
+        <Button x:Name="Apply" Content="Aceptar" HorizontalAlignment="Left" Margin="180,218,0,0" VerticalAlignment="Top" Width="70" Height="24" Click="Apply_Click"/>
+
+    </Grid>
+</Window>

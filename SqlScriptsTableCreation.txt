@@ -1,0 +1,25 @@
+Creacion de base de datos SQL Server
+
+USE "oads7_myTicketManager";
+GO
+CREATE TABLE dbo.Flights(
+    Flight VARCHAR(16) NOT NULL,
+    Airline VARCHAR(32),
+    Source VARCHAR(32),
+    Destiny VARCHAR(32),
+    DepartureDate DATETIME NOT NULL,
+    ArriveDate DATETIME NOT NULL,
+    State VARCHAR(16),
+    PRIMARY KEY ("Flight")
+);
+CREATE TABLE dbo.Users(
+    ID INT NOT NULL IDENTITY(1, 1),
+    Username VARCHAR(32),
+    Password VARCHAR(64),
+    FullName VARCHAR(64),
+    Type VARCHAR(16),
+    PRIMARY KEY ("ID")
+);
+GO
+
+
