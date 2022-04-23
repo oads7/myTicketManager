@@ -29,7 +29,6 @@ C:\Users\Alejandro\Desktop\myTicketManager\bin\Debug\net6.0-windows\runtimes\uni
 C:\Users\Alejandro\Desktop\myTicketManager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Alejandro\Desktop\myTicketManager\obj\Debug\net6.0-windows\myTicketManager.csproj.CopyComplete
 C:\Users\Alejandro\Desktop\myTicketManager\obj\Debug\net6.0-windows\View\Lobby.g.cs
-C:\Users\Alejandro\Desktop\myTicketManager\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Alejandro\Desktop\myTicketManager\obj\Debug\net6.0-windows\View\Lobby.baml
 C:\Users\Alejandro\Desktop\myTicketManager\obj\Debug\net6.0-windows\View\FlightDialog.g.cs
 C:\Users\Alejandro\Desktop\myTicketManager\obj\Debug\net6.0-windows\View\FlightDialog.baml

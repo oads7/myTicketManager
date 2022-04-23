@@ -81,3 +81,72 @@ The statement has been terminated.
 The statement has been terminated.
 [23/04/2022 - 01:24:52 p. m.] - Error - [Core .Net SqlClient Data Provider] Violation of PRIMARY KEY constraint 'PK__Flights__DE6BBDC79F43072E'. Cannot insert duplicate key in object 'dbo.Flights'. The duplicate key value is (sdfsadsa).
 The statement has been terminated.
+[23/04/2022 - 01:40:31 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:44:24 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:45:59 p. m.] - Error - [Core .Net SqlClient Data Provider] Incorrect syntax near 'SETAirline'.
+[23/04/2022 - 01:48:02 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:48:02 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:48:03 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 01:48:03 p. m.] - Error - [System.Data.SqlClient] There is already an open DataReader associated with this Command which must be closed first.
+[23/04/2022 - 01:48:19 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:53:46 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:56:09 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:01:39 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:03:49 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:04:18 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:04:18 p. m.] - Error - [System.Data.SqlClient] There is already an open DataReader associated with this Command which must be closed first.
+[23/04/2022 - 02:06:21 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:07:09 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:07:10 p. m.] - Error - [System.Data.SqlClient] There is already an open DataReader associated with this Command which must be closed first.
+[23/04/2022 - 02:07:48 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:09:11 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:09:11 p. m.] - Error - [System.Data.SqlClient] There is already an open DataReader associated with this Command which must be closed first.
+[23/04/2022 - 02:09:50 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:11:44 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:12:41 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:16:33 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:16:59 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:16:59 p. m.] - Error - [System.Data.SqlClient] There is already an open DataReader associated with this Command which must be closed first.
+[23/04/2022 - 02:17:25 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:21:04 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:27:55 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:30:42 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:32:34 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:32:49 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:37:03 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:37:35 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:38:16 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:38:26 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:38:46 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:40:06 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:40:23 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:40:24 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:40:50 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:41:17 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:42:58 p. m.] - Error - [System.Data.SqlClient] Invalid attempt to call Read when reader is closed.
+[23/04/2022 - 02:43:31 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:43:31 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:44:17 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:44:32 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:44:32 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:45:15 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:45:25 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:45:25 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:46:36 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:46:44 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:46:44 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:47:58 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:48:08 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:48:44 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:48:52 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:50:04 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:50:24 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 02:50:24 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.
+[23/04/2022 - 02:55:18 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 02:56:38 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 03:00:06 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 03:02:32 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 03:04:31 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 03:08:57 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 03:09:06 p. m.] - Error - [System.Data.SqlClient] The connection was not closed. The connection's current state is open.
+[23/04/2022 - 03:09:06 p. m.] - Error - [System.Data.SqlClient] Invalid operation. The connection is closed.

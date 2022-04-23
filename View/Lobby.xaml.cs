@@ -1,6 +1,7 @@
 ﻿using myTicketManager.Controllers;
 using myTicketManager.Entities;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,9 @@ namespace myTicketManager.View
             UserWelcome.HorizontalContentAlignment = HorizontalAlignment.Right;
             UserWelcome.Content = "Bienvenido " + Sessions.Current().fullname;
 
-            FlightDataGrid.ItemsSource = await FlightList.GetList(100);
+            ICollection<Flight> list = await FlightList.GetList(100);
+            FlightDataGrid.ItemsSource = list;
+
             FlightDataGrid.Columns[0].Header = "Flight";
             FlightDataGrid.Columns[1].Header = "Airline Company";
             FlightDataGrid.Columns[2].Header = "Source";
@@ -43,52 +46,67 @@ namespace myTicketManager.View
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
 
         private void EditFlight_Click(object sender, RoutedEventArgs e)
         {
+            int index = FlightDataGrid.SelectedIndex;
 
+            if (index < 0)
+            {
+                MessageBox.Show("Please, select one flight from table.");
+                return;
+            }
+
+            Flight element = (Flight)FlightDataGrid.Items[index];
+
+            // Open edit dialog
+            FlightDialog flightDialog = new FlightDialog();
+            flightDialog.Complete = async (resultFlight) =>
+            {
+                FlightList.UpdateFlight(resultFlight);
+
+                ICollection<Flight> list = await FlightList.GetList(100);
+                FlightDataGrid.ItemsSource = list;
+
+                FlightDataGrid.Columns[0].Header = "Flight";
+                FlightDataGrid.Columns[1].Header = "Airline Company";
+                FlightDataGrid.Columns[2].Header = "Source";
+                FlightDataGrid.Columns[3].Header = "Destiny";
+                FlightDataGrid.Columns[4].Header = "Departure Time";
+                FlightDataGrid.Columns[5].Header = "Arrive Time";
+                FlightDataGrid.Columns[6].Header = "Flight State";
+
+            };
+
+            flightDialog.Title = "Update Selected Flight";
+            flightDialog.Flight.Text = element.numFlight;
+            flightDialog.Flight.IsReadOnly = true;
+            flightDialog.Airline.Text = element.airline;
+            flightDialog.Source.Text = element.source;
+            flightDialog.Destiny.Text = element.destiny;
+
+            flightDialog.DepartureDate.SelectedDate = element.departureDate;
+            flightDialog.DepartureTime.Text = element.departureDate.ToShortTimeString();
+            flightDialog.ArriveDate.SelectedDate = element.arriveDate;
+            flightDialog.ArriveTime.Text = element.arriveDate.ToShortTimeString();
+
+            flightDialog.State.SelectedValue = element.state;
+
+            flightDialog.ShowDialog();
         }
 
         private void NewFlight_Click(object sender, RoutedEventArgs e)
         {
             FlightDialog flightDialog = new FlightDialog();
-            flightDialog.Complete = (resultFlight) => FlightList.AddFlight(resultFlight);
-            flightDialog.ShowDialog();
-
-
-            /*
-            flightDialog.Closed += (sender, args) =>
+            flightDialog.Complete = (resultFlight) =>
             {
-                item.numFlight = flightDialog.Flight.Text;
-                item.airline = flightDialog.Airline.Text;
-                item.source = flightDialog.Source.Text;
-                item.destiny = flightDialog.Destiny.Text;
-                item.departureDate = flightDialog.DepartureDate.DisplayDate;
-                item.arriveDate = flightDialog.ArriveDate.DisplayDate;
-                item.state = flightDialog.State.Text;
-
-                FlightList.AddFlight(item);
-
-                flightDialog.Close();
+                FlightList.AddFlight(resultFlight);
+                FlightDataGrid.Items.Add(resultFlight);
             };
-            */
-
-            /*
-            (sender, args) =>
-        {
-            item.numFlight = flightDialog.Flight.Text;
-            item.airline = flightDialog.Airline.Text;
-            item.source = flightDialog.Source.Text;
-            item.destiny = flightDialog.Destiny.Text;
-            item.departureDate = flightDialog.DepartureDate.DisplayDate;
-            item.arriveDate = flightDialog.ArriveDate.DisplayDate;
-            item.state = flightDialog.State.Text;
-
-            FlightList.AddFlight(item);
-        };
-            */
+            flightDialog.Title = "Register New Flight";
+            flightDialog.ShowDialog();
         }
 
         private void DeleteFlight_Click(object sender, RoutedEventArgs e)

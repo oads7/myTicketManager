@@ -18,7 +18,7 @@ namespace myTicketManager
 
         public static void InitializeDatabase()
         {
-            database = new DBO(@"Server=sql.bsite.net\MSSQL2016;Database=oads7_myTicketManager;User Id=oads7_myTicketManager;Password=admin1234*;");
+            database = new DBO(@"Server=sql.bsite.net\MSSQL2016;Database=oads7_myTicketManager;User Id=oads7_myTicketManager;Password=admin1234*;MultipleActiveResultSets=true;");
         }
 
         public static async Task<User> GetUser(string Username)
@@ -39,13 +39,15 @@ namespace myTicketManager
                     user.fullname = reader["FullName"].ToString();
                     user.type = reader["Type"].ToString();
                 }
+
+                reader.Close();
             }
             catch (Exception ex)
             {
                 Log.WriteException(ex);
             }
-            database.Close();
 
+            database.Close();
             return user;
         }
 
@@ -55,7 +57,7 @@ namespace myTicketManager
             
         //}
 
-        public static async Task<IEnumerable<Flight>> GetFlights(int lastFlights)
+        public static async Task<ICollection<Flight>> GetFlights(int lastFlights)
         {
             ICollection<Flight> list = new Collection<Flight>();
 
@@ -63,8 +65,8 @@ namespace myTicketManager
             {
                 database.Open();
                 SqlDataReader reader = await database.Query("SELECT TOP " + lastFlights + 
-                                                            "* FROM dbo.Flights ORDER BY DepartureDate DESC;");
-
+                                                            " * FROM dbo.Flights ORDER BY DepartureDate DESC;");
+                
                 while(reader.Read())
                 {
                     Flight flight = new Flight();
@@ -81,13 +83,15 @@ namespace myTicketManager
 
                     list.Add(flight);
                 }
+
+                reader.Close();
             }
             catch (Exception ex)
             {
                 Log.WriteException(ex);
             }
-            database.Close();
 
+            database.Close();
             return list;
         }
 
@@ -113,6 +117,37 @@ namespace myTicketManager
                                                                          newFLight.state + "');");
 
                 reader.Read();
+                reader.Close();
+                returnValue = true;
+            }
+            catch (Exception ex)
+            {
+                Log.WriteException(ex);
+            }
+
+            database.Close();
+            return returnValue;
+        }
+
+        public static async Task<bool> UpdateFlight(Flight existingFlight)
+        {
+            bool returnValue = false;
+
+            try
+            {
+                database.Open();
+
+                SqlDataReader reader = await database.Query("UPDATE dbo.Flights SET " +
+                                                            "Airline='" + existingFlight.airline + "', " +
+                                                            "Source='" + existingFlight.source + "', " +
+                                                            "Destiny='" + existingFlight.destiny + "', " +
+                                "DepartureDate='" + existingFlight.departureDate.ToString("yyyy-MM-ddThh:mm:ss") + "', " +
+                                "ArriveDate='" + existingFlight.arriveDate.ToString("yyyy-MM-ddThh:mm:ss") + "', " +
+                                                            "State='" + existingFlight.state + "' " +
+                                                            "WHERE Flight='" + existingFlight.numFlight + "';");
+
+                reader.Read();
+                reader.Close();
                 returnValue = true;
             }
             catch (Exception ex)
@@ -137,6 +172,7 @@ namespace myTicketManager
                 SqlDataReader reader = await database.Query("DELETE FROM dbo.Flights WHERE Flight='" + numFlight + "';");
 
                 reader.Read();
+                reader.Close();
                 returnValue = true;
             }
             catch (Exception ex)

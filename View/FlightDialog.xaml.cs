@@ -100,10 +100,9 @@ namespace myTicketManager.View
             item.arriveDate = Arrive;
             item.state = State.Text;
 
-            MessageBox.Show(Departure.ToString());
-
-            //FlightList.AddFlight(item);
             Complete(item);
+
+            Close();
         }
     }
 }

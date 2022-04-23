@@ -10,7 +10,7 @@ namespace myTicketManager.Controllers
     public static class FlightList
     {
 
-        public static async Task<IEnumerable<Flight>> GetList(int lastFlights)
+        public static async Task<ICollection<Flight>> GetList(int lastFlights)
         {
             return await Database.GetFlights(lastFlights);
         }
@@ -28,6 +28,11 @@ namespace myTicketManager.Controllers
         public static async void AddFlight(Flight flight)
         {
             await Database.AddFlight(flight);
+        }
+
+        public static async void UpdateFlight(Flight flight)
+        {
+            await Database.UpdateFlight(flight);
         }
 
     }
