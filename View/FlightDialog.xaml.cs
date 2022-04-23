@@ -1,4 +1,5 @@
-﻿using myTicketManager.Entities;
+﻿using myTicketManager.Controllers;
+using myTicketManager.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,10 @@ namespace myTicketManager.View
     /// </summary>
     public partial class FlightDialog : Window
     {
+        public delegate void FlightTransaction(Flight flight);
+        public FlightTransaction Complete;
+
+
         public FlightDialog()
         {
             InitializeComponent();
@@ -38,31 +43,67 @@ namespace myTicketManager.View
             DepartureTime.Text = DepartureDate.DisplayDate.ToShortTimeString();
         }
 
-        private void DepartureText_Changed(object sender, RoutedEventArgs e)
+        private void DepartureTime_LostFocus(object sender, RoutedEventArgs e)
         {
-            DateTime time = DateTime.Parse(DepartureTime.Text);
-
-            DepartureDate.DisplayDate.AddHours(time.Hour);
-            DepartureDate.DisplayDate.AddMinutes(time.Minute);
-            DepartureDate.DisplayDate.AddSeconds(time.Second);
+            try
+            {
+                DateTime.Parse(DepartureTime.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Error: Invalid Hour");
+            }
         }
 
         private void ArriveDate_DateChanged(object sender, RoutedEventArgs e)
         {
-            DepartureTime.Text = DepartureDate.DisplayDate.ToShortTimeString();
+            ArriveTime.Text = ArriveDate.DisplayDate.ToShortTimeString();
         }
 
-        private void ArriveText_Changed(object sender, RoutedEventArgs e)
+        private void ArriveTime_LostFocus(object sender, RoutedEventArgs e)
         {
-            DateTime time = DateTime.Parse(DepartureTime.Text);
-
-            DepartureDate.DisplayDate.AddHours(time.Hour);
-            DepartureDate.DisplayDate.AddMinutes(time.Minute);
-            DepartureDate.DisplayDate.AddSeconds(time.Second);
+            try
+            {
+                DateTime.Parse(ArriveTime.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Error: Invalid Hour");
+            }
         }
 
         private void Apply_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(Flight.Text) ||
+                string.IsNullOrEmpty(Airline.Text) ||
+                string.IsNullOrEmpty(Source.Text) ||
+                string.IsNullOrEmpty(Destiny.Text) ||
+                !DepartureDate.SelectedDate.HasValue ||
+                !ArriveDate.SelectedDate.HasValue ||
+                string.IsNullOrEmpty(State.Text))
+            {
+                MessageBox.Show("Error: Incompleted fields.");
+                return;
+            }
+
+            DateTime Departure = DateTime.Parse(DepartureDate.SelectedDate.Value.ToShortDateString() + " " + DepartureTime.Text);
+            DateTime Arrive = DateTime.Parse(ArriveDate.SelectedDate.Value.ToShortDateString() + " " + ArriveTime.Text); ;
+
+
+            Flight item = new Flight();
+
+            item.numFlight = Flight.Text;
+            item.airline = Airline.Text;
+            item.source = Source.Text;
+            item.destiny = Destiny.Text;
+            item.departureDate = Departure;
+            item.arriveDate = Arrive;
+            item.state = State.Text;
+
+            MessageBox.Show(Departure.ToString());
+
+            //FlightList.AddFlight(item);
+            Complete(item);
         }
     }
 }

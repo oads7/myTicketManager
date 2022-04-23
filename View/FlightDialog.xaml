@@ -19,11 +19,11 @@
         <TextBox x:Name="Source" HorizontalAlignment="Left" Margin="116,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <TextBox x:Name="Destiny" HorizontalAlignment="Left" Margin="116,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <DatePicker x:Name="DepartureDate" HorizontalAlignment="Left" Margin="116,124,0,0" Width="134" SelectedDateFormat="Short" SelectedDateChanged="DepartureDate_DateChanged" Height="24" VerticalAlignment="Top"/>
-        <DatePicker x:Name="ArriveDate" Margin="116,171,0,0" SelectedDateFormat="Long" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134"/>
+        <DatePicker x:Name="ArriveDate" Margin="116,171,0,0" SelectedDateFormat="Short" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134" SelectedDateChanged="ArriveDate_DateChanged"/>
         <ComboBox x:Name="State" HorizontalAlignment="Left" Margin="116,224,0,0" VerticalAlignment="Top" Width="134"/>
         <Button x:Name="Apply" Content="Aceptar" Margin="180,266,0,0" Click="Apply_Click" HorizontalAlignment="Left" Width="70" Height="24" VerticalAlignment="Top"/>
-        <TextBox x:Name="DepartureTime" HorizontalAlignment="Left" Margin="180,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="ArriveTime" HorizontalAlignment="Left" Margin="180,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="DepartureTime" HorizontalAlignment="Left" Margin="180,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" LostFocus="DepartureTime_LostFocus"/>
+        <TextBox x:Name="ArriveTime" HorizontalAlignment="Left" Margin="180,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" LostFocus="ArriveTime_LostFocus"/>
 
     </Grid>
 </Window>

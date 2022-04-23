@@ -54,10 +54,11 @@ namespace myTicketManager.View
         private void NewFlight_Click(object sender, RoutedEventArgs e)
         {
             FlightDialog flightDialog = new FlightDialog();
+            flightDialog.Complete = (resultFlight) => FlightList.AddFlight(resultFlight);
             flightDialog.ShowDialog();
 
-            Flight item = new Flight();
 
+            /*
             flightDialog.Closed += (sender, args) =>
             {
                 item.numFlight = flightDialog.Flight.Text;
@@ -72,21 +73,22 @@ namespace myTicketManager.View
 
                 flightDialog.Close();
             };
-                
-                /*
-                (sender, args) =>
-            {
-                item.numFlight = flightDialog.Flight.Text;
-                item.airline = flightDialog.Airline.Text;
-                item.source = flightDialog.Source.Text;
-                item.destiny = flightDialog.Destiny.Text;
-                item.departureDate = flightDialog.DepartureDate.DisplayDate;
-                item.arriveDate = flightDialog.ArriveDate.DisplayDate;
-                item.state = flightDialog.State.Text;
+            */
 
-                FlightList.AddFlight(item);
-            };
-                */
+            /*
+            (sender, args) =>
+        {
+            item.numFlight = flightDialog.Flight.Text;
+            item.airline = flightDialog.Airline.Text;
+            item.source = flightDialog.Source.Text;
+            item.destiny = flightDialog.Destiny.Text;
+            item.departureDate = flightDialog.DepartureDate.DisplayDate;
+            item.arriveDate = flightDialog.ArriveDate.DisplayDate;
+            item.state = flightDialog.State.Text;
+
+            FlightList.AddFlight(item);
+        };
+            */
         }
 
         private void DeleteFlight_Click(object sender, RoutedEventArgs e)

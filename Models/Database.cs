@@ -100,17 +100,17 @@ namespace myTicketManager
             try
             {
                 database.Open();
-                SqlDataReader reader = await database.Query("INSERT INTO dbo.Flights(\"Flight\", \"Airline\", " +
-                                                                                    "\"Source\", \"Destiny\", " +
-                                                                                    "\"DepartureDate\", \"ArriveDate\", " +
-                                                                                    "\"State\") " +
+                SqlDataReader reader = await database.Query("INSERT INTO dbo.Flights(Flight, Airline, " +
+                                                                                    "Source, Destiny, " +
+                                                                                    "DepartureDate, ArriveDate, " +
+                                                                                    "State) " +
                                                             "VALUES('" + newFLight.numFlight + "', '" +
                                                                          newFLight.airline + "', '" +
                                                                          newFLight.source + "', '" +
                                                                          newFLight.destiny + "', '" +
-                                                                         newFLight.departureDate.ToString() + "', '" +
-                                                                         newFLight.arriveDate.ToString() + "', '" +
-                                                                         newFLight.state + ");");
+                                                                         newFLight.departureDate.ToString("yyyy-MM-ddThh:mm:ss") + "', '" +
+                                                                         newFLight.arriveDate.ToString("yyyy-MM-ddThh:mm:ss") + "', '" +
+                                                                         newFLight.state + "');");
 
                 reader.Read();
                 returnValue = true;

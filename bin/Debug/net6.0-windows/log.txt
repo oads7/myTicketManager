@@ -48,3 +48,36 @@ Incorrect syntax near ');'.
 [23/04/2022 - 12:03:47 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
 [23/04/2022 - 12:05:24 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
 [23/04/2022 - 12:06:30 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:16:35 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:19:36 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:21:41 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:35:10 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:37:02 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:40:30 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 12:58:16 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:00:24 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:01:05 p. m.] - Error - [Core .Net SqlClient Data Provider] Unclosed quotation mark after the character string 'Waiting);'.
+Incorrect syntax near 'Waiting);'.
+[23/04/2022 - 01:11:06 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:11:18 p. m.] - Error - [Core .Net SqlClient Data Provider] Unclosed quotation mark after the character string 'Waiting);'.
+Incorrect syntax near 'Waiting);'.
+[23/04/2022 - 01:11:45 p. m.] - Error - [Core .Net SqlClient Data Provider] Unclosed quotation mark after the character string 'Waiting);'.
+Incorrect syntax near 'Waiting);'.
+[23/04/2022 - 01:11:46 p. m.] - Error - [Core .Net SqlClient Data Provider] Unclosed quotation mark after the character string 'Waiting);'.
+Incorrect syntax near 'Waiting);'.
+[23/04/2022 - 01:14:18 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:15:31 p. m.] - Error - [Core .Net SqlClient Data Provider] Unclosed quotation mark after the character string 'Waiting);'.
+Incorrect syntax near 'Waiting);'.
+[23/04/2022 - 01:16:28 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:17:55 p. m.] - Error - [Core .Net SqlClient Data Provider] Conversion failed when converting date and/or time from character string.
+[23/04/2022 - 01:18:34 p. m.] - Error - [Core .Net SqlClient Data Provider] Conversion failed when converting date and/or time from character string.
+[23/04/2022 - 01:18:38 p. m.] - Error - [Core .Net SqlClient Data Provider] Conversion failed when converting date and/or time from character string.
+[23/04/2022 - 01:22:39 p. m.] - 8AE014DF6FC45B0CB97D75506A16F8912518FCE03A1A5D4075A246096B262BA6
+[23/04/2022 - 01:23:55 p. m.] - Error - [Core .Net SqlClient Data Provider] Violation of PRIMARY KEY constraint 'PK__Flights__DE6BBDC79F43072E'. Cannot insert duplicate key in object 'dbo.Flights'. The duplicate key value is (sdf).
+The statement has been terminated.
+[23/04/2022 - 01:24:11 p. m.] - Error - [Core .Net SqlClient Data Provider] Violation of PRIMARY KEY constraint 'PK__Flights__DE6BBDC79F43072E'. Cannot insert duplicate key in object 'dbo.Flights'. The duplicate key value is (sdf).
+The statement has been terminated.
+[23/04/2022 - 01:24:13 p. m.] - Error - [Core .Net SqlClient Data Provider] Violation of PRIMARY KEY constraint 'PK__Flights__DE6BBDC79F43072E'. Cannot insert duplicate key in object 'dbo.Flights'. The duplicate key value is (sdf).
+The statement has been terminated.
+[23/04/2022 - 01:24:52 p. m.] - Error - [Core .Net SqlClient Data Provider] Violation of PRIMARY KEY constraint 'PK__Flights__DE6BBDC79F43072E'. Cannot insert duplicate key in object 'dbo.Flights'. The duplicate key value is (sdfsadsa).
+The statement has been terminated.
